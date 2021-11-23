@@ -805,7 +805,7 @@ textarea {
    ========================================================================== */
 .blog-header {
 	position: relative;
-	padding-top: calc(16rem + 4vw);
+	padding-top: calc(10rem + 4vw);
 
 	&.has-cover {
 		padding-top: calc(24rem + 8vw);
@@ -2000,7 +2000,7 @@ textarea {
 	position: relative;
 	z-index: 10;
 	margin: 0 0 2rem;
-	font-size: 4em;
+	font-size: 3em;
 	line-height: 1.25em;
 	font-weight: 700;
 	text-indent: -1px;

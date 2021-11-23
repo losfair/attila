@@ -82,8 +82,14 @@
 
 
 			<section class="post-comments">
-				<a id="show-disqus" class="post-comments-activate">{{t "Show Comments"}}</a>
-			   <div id="disqus_thread"></div>
+				<div id="cusdis_thread"
+					data-host="https://cusdis.univalent.net"
+					data-app-id="11c27884-ddfc-4172-acbd-ea082c49f2d3"
+					data-page-id="ghost-{{comment_id}}"
+					data-page-url="{{url absolute="true"}}"
+					data-page-title="{{title}}"
+        ></div>
+        <script async defer src="https://cusdis.univalent.net/js/cusdis.es.js"></script>
 			</section>
 
       {{#if @labs.subscribers}}
@@ -179,23 +185,6 @@
 	      readingProgress();
 	    }
 	  });
-		// Check if disqus is defined by code injection
-		if (typeof disqus === 'undefined') {
-			// hide comment section
-	    $('.post-comments').css({
-	      'display': 'none'
-	    });
-	  } else {
-	    $('#show-disqus').on('click', function() {
-	      $.ajax({
-	        type: "GET",
-	        url: "//" + disqus + ".disqus.com/embed.js",
-	        dataType: "script",
-	        cache: true
-	      });
-	      $(this).parent().addClass('activated');
-	    });
-	  }
   });
 </script>
 {{/contentFor}}
